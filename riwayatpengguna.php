@@ -12,6 +12,7 @@ $query_riwayat = "
     LEFT JOIN kecanduan ON hasil.id_kecanduan = kecanduan.id_kecanduan
     WHERE hasil.id_pasien = '$id_pasien'
     ORDER BY hasil.tanggal DESC";
+
 $result_riwayat = mysqli_query($con, $query_riwayat);
 ?>
 <!DOCTYPE html>
@@ -25,14 +26,14 @@ $result_riwayat = mysqli_query($con, $query_riwayat);
     <!-- Tambahkan aturan gaya CSS di sini -->
     <style>
         body {
-            color: black; /* Warna teks menjadi hitam */
+            color: black;
+            /* Warna teks menjadi hitam */
         }
 
         /* Jika Anda ingin mengubah warna teks tabel, Anda bisa menyesuaikan selektor berikut */
         #dataTables1 {
             color: black;
         }
-        
     </style>
 </head>
 
@@ -51,6 +52,7 @@ $result_riwayat = mysqli_query($con, $query_riwayat);
                             <th>Tingkatan Kecanduan</th>
                             <th width="300">Deskripsi</th>
                             <th width="300">Solusi</th>
+                            <th width="300">Aksi</th>
 
                         </tr>
                     </thead>
@@ -71,9 +73,16 @@ $result_riwayat = mysqli_query($con, $query_riwayat);
                             echo '<td>' . $row['nama_kecanduan'] . '</td>';
                             echo '<td>' . $row['deskripsi'] . '</td>';
                             echo '<td>' . $row['solusi'] . '</td>';
+
+                            // Kolom untuk aksi (tombol cetak)
+                            echo '<td>';
+                            echo '<a href="cetak_hasil.php?id=' . $row['id_pasien'] . '" target="_blank" class="btn btn-primary btn-sm">Cetak</a>'; // Ganti `cetak.php` dengan halaman atau skrip yang sesuai untuk mencetak
+                            echo '</td>';
+
                             echo '</tr>';
                         }
                         ?>
+
                     </tbody>
                 </table>
             </div>

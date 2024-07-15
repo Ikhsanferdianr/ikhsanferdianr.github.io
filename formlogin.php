@@ -16,7 +16,7 @@ include "ceklogin.php";
     <link href="assets/img/rsud.jpeg" type="image/x-icon" rel="shortcut icon">
     <!-- gambar title -->
     <link href="assets/img/rsud.jpeg" type="image/x-icon" rel="shortcut icon">
-    
+
     <!-- Custom fonts for this template-->
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -54,7 +54,7 @@ include "ceklogin.php";
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back</h1>
-                                        
+
 
                                     </div>
                                     <div class="mb-3">
@@ -92,7 +92,7 @@ include "ceklogin.php";
                                     <form class="user" action="" method="POST">
                                         <div class="mb-3">
                                             <label for="email" class="form-label">Email</label>
-                                            <input type="text" class="form-control" id="email" name="email" placeholder="Masukan Email" >
+                                            <input type="text" class="form-control" id="email" name="email" placeholder="Masukan Email">
                                         </div>
 
                                         <div class="mb-3">
@@ -105,7 +105,7 @@ include "ceklogin.php";
                                                 <label class="custom-control-label" for="customCheck">Ingat Saya</label>
                                             </div>
                                         </div>
-                                        <button type="submit" name="login" value="login" class="btn btn-primary btn-block rounded-pill" >
+                                        <button type="submit" name="login" value="login" class="btn btn-primary btn-block rounded-pill">
                                             Login
                                         </button>
                                         <hr>

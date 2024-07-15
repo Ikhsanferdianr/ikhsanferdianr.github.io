@@ -41,6 +41,3 @@ if (isset($_POST['login'])) {
         exit();
     }
 }
-
-// Sisanya dari kode Anda...
-?>

@@ -10,8 +10,8 @@
   <meta name="author" content="e-development.tech">
 
   <title>Sistem Pakar Kecanduan Game Online</title>
-  <link href="assets/img/dd.png" type="image/x-icon" rel="shortcut icon">  <!-- gambar title -->
- 
+  <link href="assets/img/dd.png" type="image/x-icon" rel="shortcut icon"> <!-- gambar title -->
+
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

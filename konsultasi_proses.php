@@ -1,8 +1,7 @@
-
-    <h3 align="center">Hasil Konsultasi</h3>
+<h3 align="center">Hasil Konsultasi</h3>
 
 <div class="card shadow mb-4">
-<div class="card-header py-3" style="color: black; font-weight: bold;">
+    <div class="card-header py-3" style="color: black; font-weight: bold;">
         Gejala Yang Dipilih
     </div>
     <div class="card-body">
@@ -39,7 +38,7 @@
                     <td>' . '  ' . ' ' . $rgejala['kode_gejala'] . ' - ' . $rgejala['nama_gejala'] . '</td>
                 </tr>
                 ';
-              }
+            }
 
             $id_kecanduan_hasil = '';
             $nama_kecanduan_hasil = '';
@@ -70,19 +69,18 @@
             }
             if ($nama_kecanduan_hasil != '') {
                 // Simpan ke tabel hasil dengan menyertakan id_gejala
-                    $q = "INSERT INTO hasil (id_pasien, id_kecanduan, username, umur, alamat, tanggal, deskripsi, solusi) 
+                $q = "INSERT INTO hasil (id_pasien, id_kecanduan, username, umur, alamat, tanggal, deskripsi, solusi) 
                     VALUES ('$id_pasien', '$id_kecanduan_hasil', '$username', '$umur', '$alamat', '$tanggal', '$deskripsi_hasil', '$solusi_hasil')";
-                    mysqli_query($con, $q);
-            
-            } else{
+                mysqli_query($con, $q);
+            } else {
                 $nama_kecanduan_hasil = '<b>Anda Tidak Mengalami Kecanduan Dalam Bermain Game Online</b>';
-                    $q = "INSERT INTO hasil (id_pasien, username, umur, alamat, tanggal) 
+                $q = "INSERT INTO hasil (id_pasien, username, umur, alamat, tanggal) 
                     VALUES ('$id_pasien', '$username', '$umur', '$alamat', '$tanggal')";
-                    mysqli_query($con, $q);
-                }
-            
-            
-            
+                mysqli_query($con, $q);
+            }
+
+
+
             $tbl_hasil = '';
 
             $tbl_hasil .= '
@@ -159,22 +157,22 @@
             ';
             }
         ?>
-        <div class="box box-success">
-            <div class="box-body">
-                <div class='table-responsive'>
-                    <table>
-                        <tbody>
-                            <?php echo $list_data; ?>
-                        </tbody>
-                    </table>
+            <div class="box box-success">
+                <div class="box-body">
+                    <div class='table-responsive'>
+                        <table>
+                            <tbody>
+                                <?php echo $list_data; ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-        </div>
         <?php } ?>
     </div>
     <div class="card-header py-3" style="color: black; font-weight: bold;">
-    Hasil Analisa
-</div>
+        Hasil Analisa
+    </div>
 
     <div class="card-body">
         <div class='table-responsive'>
@@ -187,9 +185,9 @@
     </div>
 
     <div class="card-footer">
-    <div class="col-sm-12">
-        <a href="<?php echo $link_konsultasi; ?>" class="btn btn-primary">Ulangi Konsultasi</a> &nbsp;
-        <a href="cetak_hasil.php"><button class="btn btn-success" id="btn-cetak">Cetak Hasil</button></a>
+        <div class="col-sm-12">
+            <a href="<?php echo $link_konsultasi; ?>" class="btn btn-primary">Ulangi Konsultasi</a> &nbsp;
+            <a href="cetak_hasil.php"><button class="btn btn-success" id="btn-cetak">Cetak Hasil</button></a>
+        </div>
     </div>
-</div>
 </div>
